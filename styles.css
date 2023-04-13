@@ -2,21 +2,22 @@ html {
     height: 100%;
 }
 body {
+    overflow: hidden;
     min-height: 100%;
     margin: 0;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-image: linear-gradient(-45deg, #0a0b0c, #424444);
     display: grid;
-    grid-template-rows: 10vh 80vh 10vh;
+    grid-template-rows: 10vh 75vh 15vh;
 }
 
 .body-wrapper{
     height: 100%;
     width: 100vw;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: nowrap;
+display: grid;
+grid-template-columns: 2fr 1fr;
+grid-template-rows: 100%;
 }
 
 .header-wrapper{
@@ -24,6 +25,7 @@ body {
 }
 
 .body-text{
+    margin: 10px;
     flex-grow: 1;
     display: flex;
     justify-content: center;
@@ -32,15 +34,22 @@ body {
 }
 
 .body-text-text{
+    overflow: hidden;
     font-size: 50px;
     color: rgba(255, 255, 255, 0.699);
 }
+.CodePen-span-text{
+    font-size:100%;
+}
 .body-text > .body-buttons{
     padding-top: 30px;
+    padding: 10px;
     width: 80%;
 
 }
 .body-text > .body-buttons > button{
+    max-height: 100px;
+
     border: none;
     border-radius: 8px;
 }
@@ -94,8 +103,9 @@ body {
 
 
 .footer-wrapper{
-    
+    min-height: 70px;
 display: grid;
+padding-bottom: 100px;
 grid-template-columns: 25% 25% 25% 25%;
 }
 .footer-wrapper > div{
@@ -123,16 +133,19 @@ grid-template-columns: 25% 25% 25% 25%;
 
 @media only screen and (max-width: 1000px){
     body{
+        overflow: visible;
         display: flex;
         flex-direction: column;
     }
 
     .body-wrapper{
+        display: flex;
         flex-wrap: wrap;
     }
 
     .body-text{
         text-align: center;
+
     }
 
     .body-buttons{
